@@ -10,6 +10,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { SidenavComponent } from './pages/admin/sidenav/sidenav.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { AdminHeaderComponent } from './pages/admin/admin-header/admin-header.component';
+import { HeroComponent } from './components/home/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +27,16 @@ import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.compone
     LoginComponent,
     RegistrationComponent,
     NotFoundComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    DashboardComponent,
+    HeaderComponent,
+    SidenavComponent,
+    FooterComponent,
+    AdminHeaderComponent,
+    HeroComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
