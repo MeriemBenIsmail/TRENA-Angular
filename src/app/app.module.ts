@@ -22,6 +22,10 @@ import { AuthFormComponent } from './components/auth-form/auth-form.component';
 import { FormsModule } from '@angular/forms';
 import { LoaderComponent } from './components/loader/loader.component';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { ContainerComponent } from './admin/container/container.component';
+import { AdminButtonComponent } from './admin/admin-button/admin-button.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     SignUpFormComponent,
     AuthFormComponent,
     LoaderComponent,
+    DashboardComponent,
+    SidebarComponent,
+    ContainerComponent,
+    AdminButtonComponent,
   ],
   imports: [
     BrowserModule,

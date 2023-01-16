@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { AuthServiceService } from '../../services/auth-service.service';
 export class HeaderComponent implements OnInit {
   username: string = '';
   errorMessage: string = '';
-  constructor(private authService: AuthServiceService) {}
+  constructor(
+    private authService: AuthServiceService,
+    private router: Router
+  ) {}
   token: string | any;
   ngOnInit(): void {
     window.addEventListener('scroll', this.scroll, true);
@@ -17,6 +21,9 @@ export class HeaderComponent implements OnInit {
 
     this.authService.getProfile(this.token).subscribe(
       (response) => {
+        if (response.role === 'admin') {
+          this.router.navigate(['/admin/dashboard']);
+        }
         if (response) {
           this.username = response.name;
         }
