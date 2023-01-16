@@ -1,0 +1,73 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+.loginForm h1 {
+  font-weight: bold;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.loginForm button {
+  margin-top: 30px;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 83, 38);
+  background-color: rgb(0, 83, 38);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.loginForm button:active {
+  transform: scale(0.95);
+}
+
+.loginForm button:focus {
+  outline: none;
+}
+
+.loginForm button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.loginForm form {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.loginForm form .inputGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.loginForm .inputGroup .error-msg {
+    color:red;
+    text-align: start;
+    font-size: 13px;
+    margin-top: -8px;
+}
+
+.loginForm form .inputGroup input {
+  background-color: #eee;
+  border: 1.5px solid #e5e5e5;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 5px;
+}
+.ng-invalid.ng-touched .ng-invalid.ng-touched {
+  border: 1.7px solid red;
+  border-radius: 5px;
+}
+
