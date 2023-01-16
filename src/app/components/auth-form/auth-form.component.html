@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="container" id="container" [ngClass]="toggle ? 'right-panel-active' : ''">
+        <div class="form-container sign-up-container">
+            <app-sign-up-form></app-sign-up-form>
+        </div>
+        <div class="form-container sign-in-container"><app-login-form></app-login-form></div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bon Retour !</h1>
+                    <p>Pour rester en contact avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                    <button class="ghost" id="signIn" (click)="toggleForm()">Se Connecter</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <div>
+                        <h1>Bienvenu à</h1>
+                        <div class="logo">
+                            <img src="../../../../assets/logo.png" alt="" />
+                        </div>
+                    </div>
+
+                    <p>Inscrivez-vous et commencez votre voyage avec nous.</p>
+                    <button class="ghost" id="signUp" (click)="toggleForm()">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

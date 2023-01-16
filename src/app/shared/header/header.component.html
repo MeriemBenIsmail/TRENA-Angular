@@ -1,0 +1,21 @@
+<div class="navWrapper">
+    <div class="nav">
+        <a to='/home' class="logo">
+            <img src="../../../assets/logo.png" alt="logo" />
+        </a>
+        <ul class="navlinks">
+            <li><a class="a" routerLink="">Accueil</a></li>
+            <li><a class="a" routerLink='/terrains'>Terrains</a></li>
+            <li><a class="a" routerLink='/coachs'>Coachs</a></li>
+        </ul>
+        <ul class="connection" *ngIf="!token">
+            <li class="connectionItem"><a class="a" routerLink='/connexion'>Se Connecter</a></li>
+            <li class="connectionItem">|</li>
+            <li class="connectionItem"><a class="a" routerLink='/inscription'>S'inscrire</a></li>
+        </ul>
+        <ul class="connection" *ngIf="token !== ''">
+            <li class="connectionItem"><a class="a" routerLink='/connexion'>Bienvenu {{username}}</a></li>
+        </ul>
+    </div>
+
+</div>

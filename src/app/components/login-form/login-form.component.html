@@ -1,0 +1,24 @@
+<div class="loginForm">
+    <h1>Se Connecter</h1>
+    <form (ngSubmit)="onSubmit(formulaire)" #formulaire="ngForm" action="#">
+        <div class="inputGroup">
+            <input type="email" name="email" ngModel placeholder="Email" required email #email="ngModel" />
+            <span class="error-msg" *ngIf="email.invalid && email.touched">Email Invalid</span>
+        </div>
+        <div class="inputGroup">
+
+            <input type="password" name="password" ngModel required minlength="8" #password="ngModel"
+                placeholder="Mot de passe" />
+            <span class="error-msg" *ngIf="password.invalid && password.touched">Mot de passe doit contenir 8 caractère
+                au minimum</span>
+        </div>
+        <div>
+            <span class="error-msg" *ngIf="errorMessage">{{errorMessage}}</span>
+        </div>
+        <button type="submit" [disabled]="formulaire.invalid" [ngClass]="formulaire.invalid ? 'disabled':''">Se
+            Connecter</button>
+        <div *ngIf="loading">
+            <app-loader></app-loader>
+        </div>
+    </form>
+</div>
