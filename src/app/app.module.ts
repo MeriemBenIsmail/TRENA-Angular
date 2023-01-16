@@ -11,11 +11,8 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { SidenavComponent } from './pages/admin/sidenav/sidenav.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { AdminHeaderComponent } from './pages/admin/admin-header/admin-header.component';
 import { HeroComponent } from './components/home/hero/hero.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { TitleComponent } from './components/title/title.component';
@@ -36,11 +33,8 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     RegistrationComponent,
     NotFoundComponent,
     UnauthorizedComponent,
-    DashboardComponent,
     HeaderComponent,
-    SidenavComponent,
     FooterComponent,
-    AdminHeaderComponent,
     HeroComponent,
     LayoutComponent,
     TitleComponent,

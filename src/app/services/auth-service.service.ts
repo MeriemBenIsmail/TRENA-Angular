@@ -29,7 +29,7 @@ export class AuthServiceService {
       password: password,
     });
   }
-  getProfile(token: string): Observable<any> {
+  getProfile(token: string|any): Observable<any> {
     const headers: HttpHeaders = new HttpHeaders();
     console.log(token);
     headers.append('Authorization', `Bearer ${token}`);
