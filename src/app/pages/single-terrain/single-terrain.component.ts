@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { ReservationService } from 'src/app/services/reservation.service';
 import { TerrainsService } from 'src/app/services/terrains.service';
@@ -18,6 +18,7 @@ export class SingleTerrainComponent implements OnInit {
   resErrorMessage: string = '';
   user: string = '';
   constructor(
+    private router: Router,
     private authService: AuthServiceService,
     private reservationservice: ReservationService,
     private route: ActivatedRoute,
@@ -41,17 +42,23 @@ export class SingleTerrainComponent implements OnInit {
     });
     this.terrainsService.getTerrainById(this.id).subscribe(
       (response) => {
-        this.terrain = response;
-        if (this.terrain.sport === 1) {
-          this.terrain.sport = 'football';
-        } else if (this.terrain.sport === 2) {
-          this.terrain.sport = 'basketball';
-        } else if (this.terrain.sport === 3) {
-          this.terrain.sport = 'volleyball';
-        } else if (this.terrain.sport === 4) {
-          this.terrain.sport = 'tennis';
+        if (response) {
+          this.terrain = response;
+          if (this.terrain) {
+            if (this.terrain?.sport === 1) {
+              this.terrain.sport = 'football';
+            } else if (this.terrain?.sport === 2) {
+              this.terrain.sport = 'basketball';
+            } else if (this.terrain?.sport === 3) {
+              this.terrain.sport = 'volleyball';
+            } else if (this.terrain?.sport === 4) {
+              this.terrain.sport = 'tennis';
+            }
+            this.title = 'Terrain de ' + this.terrain.sport;
+          }
+        } else {
+          this.router.navigate(['/not-found'])
         }
-        this.title = 'Terrain de ' + this.terrain.sport;
       },
       (error) => {
         this.errorMessage = error;

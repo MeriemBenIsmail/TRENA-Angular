@@ -36,6 +36,7 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { SingleTerrainComponent } from './pages/single-terrain/single-terrain.component';
 import { TerrainHeroComponent } from './components/terrain-hero/terrain-hero.component';
 import { BgHeaderComponent } from './shared/bg-header/bg-header.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { BgHeaderComponent } from './shared/bg-header/bg-header.component';
     SingleTerrainComponent,
     TerrainHeroComponent,
     BgHeaderComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

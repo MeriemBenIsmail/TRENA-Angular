@@ -19,7 +19,6 @@ const routes: Routes = [
       { path: 'detail/:id', component: SingleTerrainComponent },
     ],
   },
-  { path: 'coaches', component: CoachesComponent },
   { path: 'connexion', component: LoginComponent },
   { path: 'inscription', component: RegistrationComponent },
   { path: 'unauthorized', component: UnauthorizedComponent },
