@@ -1,0 +1,22 @@
+@import "swiper/swiper-bundle.min.css";
+@import "swiper/swiper.min.css";
+.terrainWrapper{
+    height: 600px;
+}
+.terrainWrapper .title h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: #005326;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.bg-image {
+    background: #c4eee0;
+    opacity: 1;
+  }
+.terrainWrapper .carousel .slider {
+    margin-top: 10px;
+}
