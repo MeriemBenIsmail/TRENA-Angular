@@ -37,6 +37,9 @@ import { SingleTerrainComponent } from './pages/single-terrain/single-terrain.co
 import { TerrainHeroComponent } from './components/terrain-hero/terrain-hero.component';
 import { BgHeaderComponent } from './shared/bg-header/bg-header.component';
 import { AboutComponent } from './pages/about/about.component';
+import { CatalogueTerrainsComponent } from './components/catalogue-terrains/catalogue-terrains.component';
+import { FilterTerrainsComponent } from './components/filter-terrains/filter-terrains.component';
+import { StepsTerrainsComponent } from './components/steps-terrains/steps-terrains.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,9 @@ import { AboutComponent } from './pages/about/about.component';
     TerrainHeroComponent,
     BgHeaderComponent,
     AboutComponent,
+    CatalogueTerrainsComponent,
+    FilterTerrainsComponent,
+    StepsTerrainsComponent,
   ],
   imports: [
     BrowserModule,

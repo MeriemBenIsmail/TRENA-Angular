@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthServiceService } from 'src/app/services/auth-service.service';
 import { ReservationService } from 'src/app/services/reservation.service';
 import { TerrainsService } from 'src/app/services/terrains.service';
-
 @Component({
   selector: 'app-single-terrain',
   templateUrl: './single-terrain.component.html',
@@ -42,7 +41,7 @@ export class SingleTerrainComponent implements OnInit {
       this.id = params['id'];
     });
     this.terrainsService.getTerrainById(this.id).subscribe(
-      (response) => {
+      (response: any) => {
         if (response) {
           this.terrain = response;
           if (this.terrain) {
@@ -61,7 +60,7 @@ export class SingleTerrainComponent implements OnInit {
           this.router.navigate(['/not-found']);
         }
       },
-      (error) => {
+      (error: any) => {
         this.errorMessage = error;
         this.errorMessage = error.error.message;
       }
@@ -73,11 +72,11 @@ export class SingleTerrainComponent implements OnInit {
     const { date, date_d, date_f } = formulaire.form.value;
     const newDate_d: string = date + 'T' + date_d + ':00.690Z';
     const newDate_f: string = date + 'T' + date_f + ':00.690Z';
-    console.log(date_d,date_f)
+    console.log(date_d, date_f);
     this.reservationservice
       .add(this.id, this.user, newDate_d, newDate_f)
       .subscribe(
-        (response) => {
+        (response: any) => {
           if (response) {
             if (response.res === 'error') {
               this.resErrorMessage = response.message;
@@ -89,7 +88,7 @@ export class SingleTerrainComponent implements OnInit {
             }
           }
         },
-        (error) => {}
+        (error: any) => {}
       );
   }
 }
