@@ -1,0 +1,64 @@
+.stepWrapper{
+    background: url(../../../assets/terrainBack.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: contrast(80%);
+    font-family:'Poppins',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    
+}
+.stepContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stepContainer .step1 {
+    margin-bottom: 20%;
+    flex: 1;
+    
+}
+.stepContainer .step3 {
+    margin-top: 20%;
+    flex: 1;
+    
+}
+.stepContainer .step2 {
+    
+    flex: 1;
+    
+}
+
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.step .num {
+    background-color: #FE982A;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.step .num h2 {
+    margin-bottom: 80%;
+    margin-right: 40%;
+    color: #fff;
+    font-size: 50px;
+    font-family:'Poppins',
+    sans-serif;
+}
+.step .text {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+
+}
