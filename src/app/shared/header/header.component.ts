@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthServiceService } from '../../services/auth-service.service';
 
 @Component({
@@ -10,21 +9,14 @@ import { AuthServiceService } from '../../services/auth-service.service';
 export class HeaderComponent implements OnInit {
   username: string = '';
   errorMessage: string = '';
-  dropdownVisible: boolean = false;
-  constructor(
-    private authService: AuthServiceService,
-    private router: Router
-  ) {}
+  constructor(private authService: AuthServiceService) {}
   token: string | any;
   ngOnInit(): void {
     window.addEventListener('scroll', this.scroll, true);
-
     this.token = localStorage.getItem('token');
+
     this.authService.getProfile(this.token).subscribe(
       (response) => {
-        if (response.role === 'admin') {
-          this.router.navigate(['/admin/dashboard']);
-        }
         if (response) {
           this.username = response.name;
         }
@@ -63,7 +55,4 @@ export class HeaderComponent implements OnInit {
       document.body.style.setProperty('--navbar-scroll-shadow', 'none');
     }
   };
-  onDropdown() {
-    this.dropdownVisible = !this.dropdownVisible;
-  }
 }

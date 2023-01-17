@@ -24,13 +24,9 @@ export class LoginFormComponent implements OnInit {
     this.authService.login(email, password).subscribe(
       (response) => {
         if (response) localStorage.setItem('token', response.token);
-        if (response.role === 'admin') {
-          this.router.navigate(['/admin/dashboard']);
-        } else {
-          setTimeout(() => {
-            this.router.navigate(['/']);
-          }, 3000);
-        }
+        setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 3000);
       },
       (error) => {
         this.errorMessage = error;
