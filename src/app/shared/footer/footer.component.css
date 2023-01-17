@@ -3,7 +3,17 @@
   flex-direction: column;
   overflow: hidden;
   color: #fff;
-  background: rgba(107, 196, 166, 0.5);
+  background: rgb(0, 83, 38);
+  background: #1d976c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1d976c,
+    #93f9b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(0, 83, 38), #1d976c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
   padding-top: 90px;
   padding-right: 50px;
   padding-left: 50px;
@@ -44,6 +54,10 @@
 }
 .general .parag {
   text-align: center;
+}
+.links a {
+    text-decoration: none;
+    color: #fff;
 }
 .divider {
   width: 100%;

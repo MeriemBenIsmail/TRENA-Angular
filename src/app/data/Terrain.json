@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "title": "Terrain de Football",
+    "address": "Jardins El Menzah",
+    "surface": 100,
+    "type": "foot",
+    "available": true,
+    "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ",
+
+    "review": [1, 1, 1, 0.5, 0],
+    "image": "../../../../assets/terrain1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Terrain Numero 2",
+    "address": "Jardins El Menzah",
+    "surface": 100,
+    "type": "foot",
+    "available": true,
+    "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ",
+    "image": "../../../../assets/terrain2.jpg",
+    "review": [1, 1, 1, 0.5, 0]
+  },
+
+  {
+    "id": 3,
+    "title": "Terrain Numero 3",
+    "address": "Jardins El Menzah",
+    "surface": 100,
+    "type": "foot",
+    "available": true,
+    "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ",
+    "image": "../../assets/terrain3.jpg",
+    "review": [1, 1, 1, 1, 1]
+  },
+  {
+    "id": 4,
+    "title": "Terrain Numero 4",
+    "address": "Jardins El Menzah",
+    "surface": 100,
+    "type": "foot",
+    "available": true,
+    "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ",
+    "image": "../../assets/terrain4.jpg",
+    "review": [1, 1, 1, 1, 0]
+  },
+  {
+    "id": 5,
+    "title": "Terrain Numero 5",
+    "address": "Jardins El Menzah",
+    "surface": 100,
+    "type": "foot",
+    "available": true,
+    "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ",
+    "image": "../../assets/terrain5.jpg",
+    "review": [1, 1, 1, 1, 0]
+  },
+  {
+    "id": 6,
+    "title": "Terrain Numero 6",
+    "address": "Jardins El Menzah",
+    "surface": 100,
+    "type": "foot",
+    "available": true,
+    "description": "Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ",
+    "image": "../../assets/terrain6.jpg",
+    "review": [1, 1, 1, 1, 0]
+  }
+]

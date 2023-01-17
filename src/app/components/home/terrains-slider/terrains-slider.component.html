@@ -1,0 +1,61 @@
+<div class="terrainWrapper">
+    <app-title header="Terrains Sportifs"></app-title>
+
+<ngb-carousel
+	#carousel
+	[interval]="1500"
+	[pauseOnHover]="pauseOnHover"
+	[pauseOnFocus]="pauseOnFocus"
+	(slide)="onSlide($event)"
+    [ngClass]="bgImageClass"
+    class="carousel"
+>
+	<ng-template class="slider" 
+    ngbSlide *ngFor="let val of terrains; let key = index"
+    >
+            <app-terrain-card 
+            (click)="setModalIsOpen()"
+            [id]="val.id" 
+            [sport]="val.sport" 
+            [description]="val.description" 
+            [address]="val.address" 
+            [surface]="val.surface" 
+            [image]="'../../../../assets/terrains/'+val.image">
+         </app-terrain-card>
+
+	</ng-template>
+</ngb-carousel>
+</div>
+
+<!-- 
+<div class="terrainWrapper">
+    <div class="title">
+       <h2>Terrains Sportifs</h2>
+   </div>
+   <div class="terrainSlider" [style.backgroundImage]="'url(/assets/terrains/1.jpg)'">
+       <div class="container">
+           <div class="btn">
+               <button (click)="navigateToTerrains()" [ngClass] color="#6BC4A6">
+                Voir Plus
+               </button>
+           </div>
+           <div>
+            <ngx-slick-carousel class="carousel" [config]="slideConfig">
+                   <div *ngFor="let val of terrains; let key = index">
+                       <app-terrain-card 
+                       (click)="setModalIsOpen()"
+                       [id]="val.id" 
+                       [title]="val.title" 
+                       [description]="val.description" 
+                       [address]="val.address" 
+                       [surface]="val.surface" 
+                       [image]="'../../../../assets/terrain'+val.id+'.jpg'">
+                    </app-terrain-card>
+                   </div>
+                </ngx-slick-carousel>
+                  
+           </div>
+       </div>
+   </div>
+   
+</div> -->
