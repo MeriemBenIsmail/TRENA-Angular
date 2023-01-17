@@ -13,9 +13,6 @@ export class AuthServiceService {
 
   constructor(private http: HttpClient) {}
 
-  getRepos(userName: string): Observable<any> {
-    return this.http.get(this.baseURL + 'users/' + userName + '/repos');
-  }
   register(username: string, email: string, password: string): Observable<any> {
     return this.http.post(this.baseURL + 'auth/register', {
       name: username,

@@ -10,6 +10,7 @@ import { AuthServiceService } from '../../services/auth-service.service';
 export class HeaderComponent implements OnInit {
   username: string = '';
   errorMessage: string = '';
+  dropdownVisible: boolean = false;
   constructor(
     private authService: AuthServiceService,
     private router: Router
@@ -17,8 +18,8 @@ export class HeaderComponent implements OnInit {
   token: string | any;
   ngOnInit(): void {
     window.addEventListener('scroll', this.scroll, true);
-    this.token = localStorage.getItem('token');
 
+    this.token = localStorage.getItem('token');
     this.authService.getProfile(this.token).subscribe(
       (response) => {
         if (response.role === 'admin') {
@@ -62,4 +63,7 @@ export class HeaderComponent implements OnInit {
       document.body.style.setProperty('--navbar-scroll-shadow', 'none');
     }
   };
+  onDropdown() {
+    this.dropdownVisible = !this.dropdownVisible;
+  }
 }

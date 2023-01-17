@@ -1,7 +1,7 @@
 .sidebar {
   background-color: #6bc4a6;
   font-family: 'Poppins';
-  height: 100vh;
+  height: 100%;
 }
 
 .logo {
@@ -14,7 +14,7 @@
   height: 100%;
 }
 .controls {
-  padding-top: 80px;
+  padding-top: 20px;
   color: black;
 }
 .button {

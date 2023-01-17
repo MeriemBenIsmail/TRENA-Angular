@@ -26,6 +26,13 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { ContainerComponent } from './admin/container/container.component';
 import { AdminButtonComponent } from './admin/admin-button/admin-button.component';
+import { UsersComponent } from './admin/users/users.component';
+import { AddFormComponent } from './admin/add-form/add-form.component';
+import { AddTerrainFormComponent } from './admin/add-terrain-form/add-terrain-form.component';
+import { AddCoachFormComponent } from './admin/add-coach-form/add-coach-form.component';
+import { ReservationComponent } from './admin/reservation/reservation.component';
+import { AdminTerrainComponent } from './admin/admin-terrain/admin-terrain.component';
+import { DropdownComponent } from './shared/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +57,13 @@ import { AdminButtonComponent } from './admin/admin-button/admin-button.componen
     SidebarComponent,
     ContainerComponent,
     AdminButtonComponent,
+    UsersComponent,
+    AddFormComponent,
+    AddTerrainFormComponent,
+    AddCoachFormComponent,
+    ReservationComponent,
+    AdminTerrainComponent,
+    DropdownComponent,
   ],
   imports: [
     BrowserModule,

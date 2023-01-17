@@ -13,9 +13,14 @@
             <li class="connectionItem">|</li>
             <li class="connectionItem"><a class="a" routerLink='/inscription'>S'inscrire</a></li>
         </ul>
-        <ul class="connection" *ngIf="username !== ''">
-            <li class="connectionItem"><a class="a">Bienvenu {{username}}</a></li>
-        </ul>
+        <div class="profile" *ngIf="username !== ''">
+            <ul class="connection" *ngIf="username !== ''" >
+                <li class="connectionItem"><a class="a" (click)="onDropdown()">Bienvenu {{username}}</a></li>
+            </ul>
+            <div class="dropdown" *ngIf="dropdownVisible"><app-dropdown></app-dropdown></div>
+
+        </div>
+
     </div>
 
 </div>
