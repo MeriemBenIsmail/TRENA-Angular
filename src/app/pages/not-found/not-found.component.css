@@ -18,6 +18,11 @@
   margin: 0;
   padding: 0;
 }
+.homeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #title {
   text-align: center;
