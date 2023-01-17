@@ -1,0 +1,18 @@
+<table class="table-fill">
+    <thead>
+        <tr>
+            <th class="text-left">Nom</th>
+            <th class="text-left">Email</th>
+            <th class="text-left">Role</th>
+            <th class="text-left">Action</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+        <tr *ngFor="let user of users">
+            <td class="text-left">{{user.name}}</td>
+            <td class="text-left">{{user.email}}</td>
+            <td class="text-left">{{user.role}}</td>
+            <td class="text-left icon"><i class="fa fa-trash" aria-hidden="true" (click)="handleDelete(user.email)"></i></td>
+        </tr>
+    </tbody>
+</table>

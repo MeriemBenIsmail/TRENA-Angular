@@ -1,0 +1,20 @@
+<table class="table-fill">
+    <thead>
+        <tr>
+            <th class="text-left">Utilisateur</th>
+            <th class="text-left">Terrain</th>
+            <th class="text-left">Date Début</th>
+            <th class="text-left">Date Fin</th>
+            <th class="text-left">Statut</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+        <tr *ngFor="let reservation of reservations">
+            <td class="text-left">{{reservation.user}}</td>
+            <td class="text-left">{{reservation.terrain}}</td>
+            <td class="text-left">{{reservation.date_d | date:'short'}}</td>
+            <td class="text-left">{{reservation.date_f | date:'short'}}</td>
+            <td class="text-left">{{reservation.status === 1 ? 'confirmée' : 'annulée'}}</td>
+        </tr>
+    </tbody>
+</table>

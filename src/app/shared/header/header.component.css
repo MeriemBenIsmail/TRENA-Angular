@@ -45,7 +45,19 @@
 .nav .navlinks li {
   margin: 0 25px;
 }
-
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+.profile .dropdown {
+  margin-left: 40px;
+  margin-top: 70px;
+  position: absolute;
+}
 .logo {
   width: 180px;
   height: 80px;
