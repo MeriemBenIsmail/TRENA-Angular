@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
@@ -9,8 +8,11 @@ import { Router } from '@angular/router';
 export class HeroComponent implements OnInit {
   constructor(private router: Router) {}
 
+
   ngOnInit(): void {}
   goToTerrain() {
-    this.router.navigate(['/terrains']);
-  }
+    const link = ['terrains'];
+    this.router.navigate(link);
+    }
+  
 }

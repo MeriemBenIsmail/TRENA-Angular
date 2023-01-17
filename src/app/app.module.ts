@@ -40,6 +40,11 @@ import { AboutComponent } from './pages/about/about.component';
 import { CatalogueTerrainsComponent } from './components/catalogue-terrains/catalogue-terrains.component';
 import { FilterTerrainsComponent } from './components/filter-terrains/filter-terrains.component';
 import { StepsTerrainsComponent } from './components/steps-terrains/steps-terrains.component';
+import { AboutUsComponent } from './components/home/about-us/about-us.component';
+import { CardComponent } from './components/home/card/card.component';
+import { TerrainCardComponent } from './components/Terrain/terrain-card/terrain-card.component';
+import { TerrainsSliderComponent } from './components/home/terrains-slider/terrains-slider.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -88,5 +93,6 @@ import { StepsTerrainsComponent } from './components/steps-terrains/steps-terrai
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}
