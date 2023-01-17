@@ -33,6 +33,9 @@ import { AddCoachFormComponent } from './admin/add-coach-form/add-coach-form.com
 import { ReservationComponent } from './admin/reservation/reservation.component';
 import { AdminTerrainComponent } from './admin/admin-terrain/admin-terrain.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
+import { SingleTerrainComponent } from './pages/single-terrain/single-terrain.component';
+import { TerrainHeroComponent } from './components/terrain-hero/terrain-hero.component';
+import { BgHeaderComponent } from './shared/bg-header/bg-header.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +67,9 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
     ReservationComponent,
     AdminTerrainComponent,
     DropdownComponent,
+    SingleTerrainComponent,
+    TerrainHeroComponent,
+    BgHeaderComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,10 +8,17 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { UnauthorizedComponent } from './pages/unauthorized/unauthorized.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { SingleTerrainComponent } from './pages/single-terrain/single-terrain.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'terrains', component: TerrainsComponent },
+  {
+    path: 'terrains',
+    children: [
+      { path: '', component: TerrainsComponent },
+      { path: 'detail/:id', component: SingleTerrainComponent },
+    ],
+  },
   { path: 'coaches', component: CoachesComponent },
   { path: 'connexion', component: LoginComponent },
   { path: 'inscription', component: RegistrationComponent },

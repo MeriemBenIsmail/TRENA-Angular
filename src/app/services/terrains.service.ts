@@ -12,6 +12,9 @@ export class TerrainsService {
   getTerrains(): Observable<any> {
     return this.http.get(this.baseURL + 'terrains/');
   }
+  getTerrainById(id: string): Observable<any> {
+    return this.http.get(this.baseURL + 'terrains/' + id);
+  }
   delete(id: string): Observable<any> {
     return this.http.delete(this.baseURL + 'terrains/' + id);
   }

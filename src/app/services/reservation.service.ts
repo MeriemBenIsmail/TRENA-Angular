@@ -13,4 +13,18 @@ export class ReservationService {
   getReservations(): Observable<any> {
     return this.http.get(this.baseURL + 'reservations/');
   }
+  add(
+    terrain: string,
+    user: string,
+    date_d: string,
+    date_f: string
+  ): Observable<any> {
+    return this.http.post(this.baseURL + 'reservations/', {
+      user: user,
+      terrain: terrain,
+      date_d: date_d,
+      date_f: date_f,
+      status: 1,
+    });
+  }
 }
