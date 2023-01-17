@@ -1,0 +1,63 @@
+ <div class="filters">
+    <div className="sport">
+        <button class="btn">
+    Sports
+    </button>
+
+        <div class="input">
+            <input type="checkbox" value="football" [(ngModel)]="filters.sport" />
+            <span>Football</span>
+            <img src="../../../assets/football.png" alt="" />
+        </div>
+        <div class="input">
+            <input type="checkbox"  value="tennis" [(ngModel)]="filters.sport" />
+            <span>Tennis</span>
+            <img src="../../../assets/tennis.png" alt="" />
+        </div>
+        <div class="input">
+            <input type="checkbox"  value="volleyball" [(ngModel)]="filters.sport" />
+            <span>Volleyball</span>
+            <img src="../../../assets/volleyball.png" alt="" />
+        </div>
+        <div class="input">
+            <input type="checkbox"  value="basketball" [(ngModel)]="filters.sport" />
+            <span>Basketball</span>
+            <img src="../../../assets/basketball-ball.png" alt="" />
+        </div>
+        
+    </div>
+    <div class="address">
+        <button class="btn">
+            Gouvernorat
+        </button>
+        <div class="selectG" >
+           <input type="text" value="" [(ngModel)]="filters.address"  />
+        </div>
+        
+        
+    </div>
+    <div class="surface">
+        <button class="btn">
+            Surface
+        </button>
+        <div class="range">
+            <div class="slider-container">
+                
+                <div class="slider-range">
+                  <div class="slider-range-min">Min: <span id="range-min">0</span> m²</div>
+                  <div class="slider-range-max">Max: <span id="range-max">100000</span> m²</div>
+                </div>
+                <div class="slider-input">
+                  <input [(ngModel)]="filters.surface" type="range" min="0" max="100000" step="50" value="0" class="slider" id="surface-range">
+                </div>
+              </div>
+            <div class="labels">
+                
+            </div>
+        </div>
+        
+    </div>
+    <div>
+        <button class="btn" (click)="filter()">Filtrer</button>
+    </div>
+</div>

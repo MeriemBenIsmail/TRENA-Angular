@@ -1,0 +1,38 @@
+    <div class="catalogueContainer">
+        <div class="title">
+            <div class="line" ></div>
+            <h2>Terrains Sportifs</h2>
+
+        </div>
+        <div class="content">
+            <div class="filters">
+                    <div>
+                        <app-filter-terrains [terrains]="terrains" (filterChange)="onFilterChange($event)"></app-filter-terrains>
+                    </div>
+                    
+                 
+                    
+            </div>
+            <div class="catalogue">
+              
+                <div *ngFor="let terrain of filteredTerrains">
+                    <div class="terrainCard">
+                    <div class="card">
+                        <div class="img">
+                            <img src="../../../assets/terrains/{{terrain.image}}" alt="#">
+                        </div>
+                        <div class="content">
+                            <h3>{{terrain.title}}</h3>
+                            <h4>Address: {{terrain.address}}</h4>
+                            <h4>Surface:{{" "+terrain.surface}} m²</h4>
+                        </div>
+                        <div class="detailBtn">
+                            <a class="btn" routerLink='/detail/{{terrain.id}}'>Détails</a>
+                            
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>

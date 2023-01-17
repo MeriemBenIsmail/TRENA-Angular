@@ -57,12 +57,7 @@
     font-size: 13px;
     margin-top: -8px;
 }
-.error-msg {
-    color:red;
-    text-align: start;
-    font-size: 13px;
-    margin-top: -8px;
-}
+
 .loginForm form .inputGroup input {
   background-color: #eee;
   border: 1.5px solid #e5e5e5;
