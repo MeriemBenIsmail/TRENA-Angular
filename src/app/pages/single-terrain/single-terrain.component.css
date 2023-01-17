@@ -45,6 +45,9 @@
 .error-msg i {
   color: red;
 }
+.success-msg {
+  color: #1d976c;
+}
 .reservation .timeGroup {
   margin: 10px 0;
   display: grid;

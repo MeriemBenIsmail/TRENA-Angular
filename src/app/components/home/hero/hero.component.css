@@ -84,7 +84,11 @@
     background-position: 400%;
   }
 }
-
+.terrainBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .firstWord {
   padding-left: 5px;
 

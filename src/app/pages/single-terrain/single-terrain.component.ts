@@ -16,6 +16,7 @@ export class SingleTerrainComponent implements OnInit {
   terrain: any;
   errorMessage: string = '';
   resErrorMessage: string = '';
+  resSuccessMessage: string = '';
   user: string = '';
   constructor(
     private router: Router,
@@ -57,7 +58,7 @@ export class SingleTerrainComponent implements OnInit {
             this.title = 'Terrain de ' + this.terrain.sport;
           }
         } else {
-          this.router.navigate(['/not-found'])
+          this.router.navigate(['/not-found']);
         }
       },
       (error) => {
@@ -72,6 +73,7 @@ export class SingleTerrainComponent implements OnInit {
     const { date, date_d, date_f } = formulaire.form.value;
     const newDate_d: string = date + 'T' + date_d + ':00.690Z';
     const newDate_f: string = date + 'T' + date_f + ':00.690Z';
+    console.log(date_d,date_f)
     this.reservationservice
       .add(this.id, this.user, newDate_d, newDate_f)
       .subscribe(
@@ -79,6 +81,11 @@ export class SingleTerrainComponent implements OnInit {
           if (response) {
             if (response.res === 'error') {
               this.resErrorMessage = response.message;
+            } else {
+              this.resSuccessMessage = 'Reservation effectuée avec succés';
+              setTimeout(() => {
+                window.location.reload();
+              }, 3000);
             }
           }
         },
